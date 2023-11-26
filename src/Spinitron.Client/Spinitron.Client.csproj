@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <UserSecretsId>aee2454a-2904-41a0-abf4-329a280525a7</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Flurl" />
+      <PackageReference Include="JetBrains.Annotations" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.KeyPerFile" />
+      <PackageReference Include="Microsoft.Extensions.Http" />
+    </ItemGroup>
+
+</Project>
