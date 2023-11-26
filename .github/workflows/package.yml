@@ -28,5 +28,5 @@ jobs:
       - uses: dotnet/nbgv@master
         id: nbgv
       - name: Push
-        run: dotnet nuget push "artifacts/package/release/Spinitron.Client.${{ steps.nbgv.outputs.NuGetPackageVersion }}.nupkg"
+        run: dotnet nuget push "artifacts/package/release/Spinitron.Client.${{ steps.nbgv.outputs.NuGetPackageVersion }}.nupkg" --source "github"
       
