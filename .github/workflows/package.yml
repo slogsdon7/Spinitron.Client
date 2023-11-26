@@ -23,5 +23,5 @@ jobs:
       - uses: dotnet/nbgv@master
         id: nbgv
       - name: Push
-        run: dotnet nuget push "artifacts/package/release/Spinitron.Client.${{ steps.nbgv.outputs.NuGetPackageVersion }}.nupkg"  --api_key ${{ secrets.GITHUB_TOKEN }} --source "github"
+        run: dotnet nuget push "artifacts/package/release/Spinitron.Client.${{ steps.nbgv.outputs.NuGetPackageVersion }}.nupkg"  --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
       
