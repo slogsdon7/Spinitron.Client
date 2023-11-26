@@ -7,7 +7,7 @@ using Spinitron.Client.Models;
 
 namespace Spinitron.Client.Http;
 
-public class SpinitronClient(HttpClient client, ILogger<SpinitronClient> logger) : ISpinitronClient
+public class SpinitronClient(HttpClient client) : ISpinitronClient
 {
     private async Task<T> Get<T>(string endpoint, Dictionary<string, object?>? queryParams = null)
     {
