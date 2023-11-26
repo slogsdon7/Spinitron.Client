@@ -3,6 +3,7 @@
   <PropertyGroup>
     <PackageId>Spinitron.Client</PackageId>
     <Authors>Sam Logsdon</Authors>
+    <UseArtifactsOutput>true</UseArtifactsOutput>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Nerdbank.GitVersioning" Condition="!Exists('packages.config')">
