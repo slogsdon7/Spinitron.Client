@@ -1,16 +1,11 @@
 ﻿# This workflow will build a .NET project
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
-
 name: Package
-
 on:
   workflow_dispatch:
-
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
         with:
@@ -28,5 +23,5 @@ jobs:
       - uses: dotnet/nbgv@master
         id: nbgv
       - name: Push
-        run: dotnet nuget push "artifacts/package/release/Spinitron.Client.${{ steps.nbgv.outputs.NuGetPackageVersion }}.nupkg" --source "github"
+        run: dotnet nuget push "artifacts/package/release/Spinitron.Client.${{ steps.nbgv.outputs.NuGetPackageVersion }}.nupkg"  --api_key ${{ secrets.GITHUB_TOKEN }} --source "github"
       
